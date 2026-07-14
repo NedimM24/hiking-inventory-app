@@ -1,9 +1,33 @@
+body{
+    margin: 0;
+}
 .category-card{
     border: solid 2px black;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 .item-card{
     border: solid 2px black;
     padding: 1rem;
+}
+
+.header{
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 3.6rem;
+    border-bottom: 1px solid #b8b5b5;
+    text-decoration: none;
+}
+
+.header a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-nav{
+    display: flex;
+    gap: 1rem;
 }
