@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="items-container">
+        <h1>Hey</h1>
+        <%items.forEach((item) => {%>
+            <div class="item-card">
+                <p><%=item.name%></p>
+                <p><%=item.description%></p>
+                <p><%=item.price%></p>
+                <p><%=item.quantity%></p>
+                <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
+            </div>
+        <%})%>
+    </div>
+</body>
+</html>
