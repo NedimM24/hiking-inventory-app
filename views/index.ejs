@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    
+    <%- include('partials/header')%>
     <div class="categories-container">
         <%categories.forEach((category) => {%>
             <div class="category-card">
@@ -19,6 +19,5 @@
             
         <%})%>
     </div>
-
 </body>
 </html>

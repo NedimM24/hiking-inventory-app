@@ -26,9 +26,14 @@ export async function getItemById(req: Request, res: Response) {
         res.status(404).send("Oops, item not found!");
         return;
     }
-
     res.render("itemDetails", { item })
 }
+
+export async function showCategoryForm(req: Request, res: Response) {
+    res.render("categoryForm")
+}
+
+
 
 
 
