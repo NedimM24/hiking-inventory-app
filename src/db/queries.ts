@@ -24,3 +24,11 @@ export async function insertNewCategory(
             [name, description, image_url]
         );
 }
+
+export async function insertNewItem(
+    name: string, description: string, price: number, quantity:number, category_id: number, image_url: string): Promise<void>{
+            await pool.query(
+            "INSERT INTO items(name, description, price, quantity, category_id, image_url) values ($1, $2, $3, $4, $5, $6)",
+            [name, description, price, quantity, category_id, image_url]
+        );
+}
