@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { getAllCategories, fetchItemsInCategory, fetchItemById } from "../db/queries.js";
+import { getAllCategories, fetchItemsInCategory, fetchItemById, insertNewCategory } from "../db/queries.js";
 
 //Function that displays all categories and lives on the homepage
 //Calls a get all function from quesries that selects all from categories 
@@ -31,6 +31,13 @@ export async function getItemById(req: Request, res: Response) {
 
 export async function showCategoryForm(req: Request, res: Response) {
     res.render("categoryForm")
+}
+
+//POST category
+export async function createCategory(req: Request, res: Response) {
+    const { name, description, image_url } = req.body;
+    await insertNewCategory(name, description, image_url);
+    res.redirect('/');
 }
 
 

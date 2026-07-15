@@ -1,4 +1,15 @@
 
     <%- include('partials/header')%>
-    <h1>form goes here</h1>
+    <form class="form" method="POST" action="/createCategory">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="description">Description</label>
+        <input id="description" name="description" type="text" required>
+
+        <label for="description">Image url</label>
+        <input id="image_url" name="image_url" type="text" placeholder="Can be left blank">
+
+        <button type="submit">Add Category</button>
+    </form>
     <%- include('partials/footer')%>
