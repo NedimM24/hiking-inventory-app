@@ -3,6 +3,7 @@ import {
     fetchItemsInCategory, 
     fetchItemById, 
     insertNewItem,
+    updateItem
 } from "../db/itemsQueries.js";
 import { body, validationResult } from "express-validator";
 
@@ -27,11 +28,22 @@ export async function getItemById(req: Request, res: Response) {
     res.render("itemDetails", { item })
 }
 
-
 //Getting the category id here to pass to item form so we can submmit the item to the correct category
 export async function showItemForm(req: Request, res: Response) {
     const id = Number(req.params.id);
     res.render("itemForm", {categoryId: id})
+}
+
+//Getting the category id here to pass to item form so we can submmit the item to the correct category
+export async function getUpdateItemForm(req: Request, res: Response) {
+    const id = Number(req.params.id);
+    const item = await fetchItemById(id);
+
+
+    if(!item){
+        return res.status(404).send("item not found");
+    }
+    res.render("updateItem", {item, categoryId: item.category_id})
 }
 
 //VALIDATION GOES HERE 
@@ -79,5 +91,26 @@ export const createItem = [
     const itemImage = image_url || defaultImageItem;
     await insertNewItem( name , description, price, quantity, categoryId, itemImage);
     res.redirect(`/categoryDetails/${categoryId}`)
+}
+];
+
+export const updateItemForm = [
+    ...validateItem, 
+    async (req: Request, res: Response) => {
+        const itemErrors = validationResult(req);
+        if(!itemErrors.isEmpty()){
+            return res.status(400).render("itemForm", {
+                title: "Create new item",
+                categoryId: Number(req.params.id),
+                errors: itemErrors.array(),
+            })
+        }
+   
+    const { name , description, price, quantity, image_url } = req.body;
+    const itemImage = image_url || defaultImageItem;
+    const id = Number(req.params.id)
+    const categoryId = Number(req.body.category_id);
+    await updateItem( id, name , description, price, quantity, categoryId, itemImage);
+    res.redirect(`/itemDetails/${id}`)
 }
 ];

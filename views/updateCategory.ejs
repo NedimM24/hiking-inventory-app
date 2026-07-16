@@ -2,7 +2,7 @@
     <%- include('partials/header')%>
     <%- include('partials/categoryErrors')%>
     <h1>Update <%=category.name%></h1>
-    <form class="form" method="POST" action="/<%=category.id%>/update">
+    <form class="form" method="POST" action="/<%=category.id%>/updateCategory">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" value="<%=category.name%>" required>
 

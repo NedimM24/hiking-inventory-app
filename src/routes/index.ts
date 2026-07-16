@@ -11,29 +11,27 @@ import {
     getItemsInCategory, 
     getItemById, 
     showItemForm,
-    createItem
+    createItem,
+    getUpdateItemForm,
+    updateItemForm
 } from "../controllers/itemsController.js";
 
 const router = express.Router();
 
+//CREATE
+router.post('/createCategory', createCategory);
+router.post('/categoryDetails/:id/createItem', createItem);
+//READ
 router.get('/', printAllCategories);
 router.get('/categoryDetails/:id', getItemsInCategory);
 router.get('/itemDetails/:id', getItemById);
 router.get('/newCategory', showCategoryForm);
-router.post('/createCategory', createCategory);
 router.get('/categoryDetails/:id/newItem', showItemForm);
-router.post('/categoryDetails/:id/createItem', createItem);
-
 router.get("/:id/updateCategory", getUpdateCategoryForm)
-router.post("/:id/updateCategory", updateCategoryForm)
-
-
-//CREATE
-
-//READ
-
+router.get("/:id/updateItem", getUpdateItemForm)
 //UPDATE
-
+router.post("/:id/updateCategory", updateCategoryForm)
+router.post("/:id/updateItem", updateItemForm)
 //DELETE
 
 
