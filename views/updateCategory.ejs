@@ -1,0 +1,17 @@
+
+    <%- include('partials/header')%>
+    <%- include('partials/categoryErrors')%>
+    <h1>Update <%=category.name%></h1>
+    <form class="form" method="POST" action="/<%=category.id%>/update">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" value="<%=category.name%>" required>
+
+        <label for="description">Description</label>
+        <input id="description" name="description" type="text" value="<%=category.description%>" required>
+
+        <label for="image_url">Image url</label>
+        <input id="image_url" name="image_url" type="text" value="<%=category.image_url%>" placeholder="Can be left blank">
+
+        <button type="submit">Update Category</button>
+    </form>
+    <%- include('partials/footer')%>

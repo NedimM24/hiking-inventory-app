@@ -1,21 +1,10 @@
 import express from "express";
-
-
-/* 
-import { printAllCategories, 
-    getItemsInCategory, 
-    getItemById, 
-    showCategoryForm, 
-    createCategory,
-    showItemForm,
-    createItem
-} from "../controllers/indexController.js";
-*/
-
 import {
     printAllCategories,
     showCategoryForm,
-    createCategory
+    createCategory,
+    getUpdateCategoryForm,
+    updateCategoryForm
 } from "../controllers/categoriesController.js"
 
 import { 
@@ -34,6 +23,18 @@ router.get('/newCategory', showCategoryForm);
 router.post('/createCategory', createCategory);
 router.get('/categoryDetails/:id/newItem', showItemForm);
 router.post('/categoryDetails/:id/createItem', createItem);
+
+router.get("/:id/updateCategory", getUpdateCategoryForm)
+router.post("/:id/updateCategory", updateCategoryForm)
+
+
+//CREATE
+
+//READ
+
+//UPDATE
+
+//DELETE
 
 
 

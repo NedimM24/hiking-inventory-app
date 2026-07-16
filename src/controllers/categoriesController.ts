@@ -1,6 +1,8 @@
 import type { Request, Response } from "express";
 import { getAllCategories, 
     insertNewCategory,
+    fetchCategoryById,
+    updateCategory
   
 } from "../db/categoriesQueries.js";
 import { body, validationResult } from "express-validator";
@@ -15,6 +17,18 @@ export async function printAllCategories(_req: Request, res: Response) {
 //Renders the new category form
 export async function showCategoryForm(req: Request, res: Response) {
     res.render("categoryForm")
+}
+
+//Renders the update category form
+export async function getUpdateCategoryForm(req: Request, res: Response) {
+    const id = Number(req.params.id);
+    const category = await fetchCategoryById(id)
+    if(!category){
+        res.status(404).send("Category not found");
+        return
+    }
+
+    res.render("updateCategory", {category})
 }
 
 //VALIDATION GOES HERE 
@@ -58,3 +72,22 @@ export const createCategory = [
     res.redirect('/');
  }
 ];
+
+export const updateCategoryForm = [
+    ...validateCategory,
+    async (req: Request, res: Response) => {
+        const id = Number(req.params.id);
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            return res.status(400).render("updateCategory", {
+                title: "Update category",
+                errors: errors.array(),
+                category:{id, ...req.body}
+            })
+        }
+    const { name, description, image_url } = req.body;
+    const categoryImage = image_url || defaultImageUrl;
+    await updateCategory(id, name, description, categoryImage);
+    res.redirect('/');
+    }
+]
