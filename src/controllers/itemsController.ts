@@ -3,7 +3,7 @@ import {
     fetchItemsInCategory, 
     fetchItemById, 
     insertNewItem,
-} from "../db/queries.js";
+} from "../db/itemsQueries.js";
 import { body, validationResult } from "express-validator";
 
 //Function displays all of the items in the category when a user clicks on view all

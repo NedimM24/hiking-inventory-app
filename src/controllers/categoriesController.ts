@@ -2,7 +2,7 @@ import type { Request, Response } from "express";
 import { getAllCategories, 
     insertNewCategory,
   
-} from "../db/queries.js";
+} from "../db/categoriesQueries.js";
 import { body, validationResult } from "express-validator";
 
 //Function that displays all categories and lives on the homepage
