@@ -5,6 +5,6 @@ export interface Item{
     description: string | null;
     price: number;
     quantity: number;
-    categoty_id:number;
+    category_id:number;
     image_url: string | null;
 }
