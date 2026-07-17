@@ -1,9 +1,9 @@
 
    <%- include('partials/header')%>
+   <h1><%=category.name%></h1>
    <a href="/categoryDetails/<%= categoryId%>/newItem">Add New Item</a>
     <div class="items-container">
         <%items.forEach((item) => {%>
-            <h1></h1>
             <div class="item-card">
                 <p><%=item.name%></p>
                 <p><%=item.description%></p>

@@ -3,16 +3,19 @@ import {
     fetchItemsInCategory, 
     fetchItemById, 
     insertNewItem,
-    updateItem
+    updateItem,
+    deleteItem
 } from "../db/itemsQueries.js";
 import { body, validationResult } from "express-validator";
+import { fetchCategoryById } from "../db/categoriesQueries.js";
 
 //Function displays all of the items in the category when a user clicks on view all
 //Id is passed based on the matching category_id and themn the categoryDetails views is rendered
 export async function getItemsInCategory(req: Request, res: Response) {
     const id = Number(req.params.id);
     const items = await fetchItemsInCategory(id)
-    res.render("categoryDetails", { items, categoryId: id })
+    const category = await fetchCategoryById(id);
+    res.render("categoryDetails", { category, items, categoryId: id })
 }
 
 //Function displays all of the items in the category when a user clicks on view all
@@ -26,6 +29,19 @@ export async function getItemById(req: Request, res: Response) {
         return;
     }
     res.render("itemDetails", { item })
+}
+
+//Function to delete an item
+export async function removeItem(req: Request, res: Response){
+    const id = Number(req.params.id);
+    const item = await fetchItemById(id)
+
+    if(!item){
+        return res.status(404).send("item not found")
+    }
+
+    await deleteItem(id);
+    res.redirect(`/categoryDetails/${item.category_id}`);
 }
 
 //Getting the category id here to pass to item form so we can submmit the item to the correct category

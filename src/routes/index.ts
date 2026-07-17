@@ -14,7 +14,8 @@ import {
     showItemForm,
     createItem,
     getUpdateItemForm,
-    updateItemForm
+    updateItemForm,
+    removeItem
 } from "../controllers/itemsController.js";
 
 const router = express.Router();
@@ -35,6 +36,6 @@ router.post("/:id/updateCategory", updateCategoryForm)
 router.post("/:id/updateItem", updateItemForm)
 //DELETE
 router.post('/:id/deleteCategory', removeCategory)
-//router.delete('/:id/deleteItem', deleteItem)
+router.post('/:id/deleteItem', removeItem)
 
 export default router
