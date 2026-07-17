@@ -4,7 +4,8 @@ import {
     showCategoryForm,
     createCategory,
     getUpdateCategoryForm,
-    updateCategoryForm
+    updateCategoryForm,
+    removeCategory
 } from "../controllers/categoriesController.js"
 
 import { 
@@ -33,8 +34,7 @@ router.get("/:id/updateItem", getUpdateItemForm)
 router.post("/:id/updateCategory", updateCategoryForm)
 router.post("/:id/updateItem", updateItemForm)
 //DELETE
-
-
-
+router.post('/:id/deleteCategory', removeCategory)
+//router.delete('/:id/deleteItem', deleteItem)
 
 export default router

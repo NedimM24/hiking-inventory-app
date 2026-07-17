@@ -7,7 +7,13 @@
                 <p><%=item.price%></p>
                 <p><%=item.quantity%></p>
                 <p><a href="/<%=item.id%>/updateItem">Update</a></p>
-                <p><a href="">Delete</a></p>
+                
+                <form action="/<%=item.id%>/deleteItem" method="post"
+                    onsubmit="return confirm('Are you sure you want to Delete?')">
+                    <button type="submit">Delete</button>
+                </form>
+
+
                 <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
             </div>
             <a href="/categoryDetails/<%=item.category_id%>">Back</a>

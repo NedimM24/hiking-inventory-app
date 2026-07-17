@@ -29,3 +29,10 @@ export async function updateCategory(
     );
 }
 
+//DELETE QUERY
+export async function deleteCategory(id: number): Promise<void>{
+    await pool.query(
+        "DELETE FROM categories WHERE id = $1",
+        [id] 
+    )
+}

@@ -2,7 +2,8 @@ import type { Request, Response } from "express";
 import { getAllCategories, 
     insertNewCategory,
     fetchCategoryById,
-    updateCategory
+    updateCategory,
+    deleteCategory
   
 } from "../db/categoriesQueries.js";
 import { body, validationResult } from "express-validator";
@@ -30,6 +31,14 @@ export async function getUpdateCategoryForm(req: Request, res: Response) {
 
     res.render("updateCategory", {category})
 }
+
+//FUNCTION DELETES CATEGORY
+export async function removeCategory(req: Request, res: Response){
+    const id = Number(req.params.id);
+    await deleteCategory(id);
+    res.redirect('/');
+}
+
 
 //VALIDATION GOES HERE 
 const nameLengthErr = "must be between 1 and 25 characters"
@@ -90,4 +99,4 @@ export const updateCategoryForm = [
     await updateCategory(id, name, description, categoryImage);
     res.redirect('/');
     }
-]
+];

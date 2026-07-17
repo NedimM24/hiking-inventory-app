@@ -28,3 +28,10 @@ export async function updateItem(
             [name, description, price, quantity, category_id, image_url, id]
     );
 }
+
+export async function deleteItem(id: number): Promise<void>{
+    await pool.query(
+        "DELETE FROM items WHERE id = $1",
+        [id]
+    )
+}

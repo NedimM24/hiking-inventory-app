@@ -8,6 +8,13 @@
                 <img src="<%=category.image_url%>" alt="Pic of <%=category.name%>" height="150px" width="150px">
                 <a href="/categoryDetails/<%=category.id%>">View all <%=category.name%></a>
                 <a href="/<%=category.id%>/updateCategory">Update</a>
+
+              
+                <form action="/<%=category.id%>/deleteCategory" method="post"
+                    onsubmit="return confirm('Are you sure you want to Delete?')">
+                    <button type="submit">Delete</button>
+                </form>
+
             </div>
         <%})%>
     </div>
