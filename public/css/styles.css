@@ -66,6 +66,7 @@ body{
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
+    font-family: "Montserrat", sans-serif;
     /*box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);*/
 }
 
@@ -106,10 +107,10 @@ body{
 
 .title{
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-    font-weight: bolder;
+    font-size: x-large;
+    font-weight: bold;
     color: var(--button-color-1);
-   
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .category-card img{
@@ -126,7 +127,7 @@ body{
     overflow: hidden;
     margin-left: .3rem;
     margin-right: .3rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     font-size: medium;
     
