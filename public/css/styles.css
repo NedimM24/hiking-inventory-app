@@ -89,16 +89,18 @@ body{
 }
 
 .btn-delete:hover{
-    transform: scale(1.005);
+    transform: scale(1.07);
 }
 
 .btn-delete{
     width: 100%;
     border: none;
     background-color: var(--primary);
-    font-size: x-large;
     color: rgb(245, 61, 61);
-    cursor: pointer;
+    cursor: pointer; 
+    font-size: large;
+    margin-bottom: .2rem;
+    border-bottom: .5px solid white;
 }
 
 .category-card p{
