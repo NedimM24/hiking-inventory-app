@@ -2,15 +2,21 @@
    <%- include('partials/header')%>
    <h1><%=category.name%></h1>
    <a href="/categoryDetails/<%= categoryId%>/newItem">Add New Item</a>
-    <div class="items-container">
+    <div class="categories-container">
         <%items.forEach((item) => {%>
-            <div class="item-card">
+            <div class="category-card">
                 <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
-                <p><%=item.name%></p>
-                <p><%=item.description%></p>
-                <p><%=item.price%></p>
-                <p><%=item.quantity%></p>
-                <p><a href="/itemDetails/<%=item.id%>">View Item</a></p>
+                <div class="card-body">
+                    <p class="title"><%=item.name%></p>
+                    <p class="category-description"><%=item.description%></p>
+                    <p>Price: $<%=item.price%></p>
+                    <p>Quantity: <%=item.quantity%></p>
+                </div>
+              
+                <div class="card-actions">
+                    <a class="btn btn-view" href="/itemDetails/<%=item.id%>">View Item</a>
+                </div>
+                
                 
             </div>
         <%})%>

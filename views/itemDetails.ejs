@@ -1,21 +1,21 @@
 
     <%- include('partials/header')%>
-    <div class="item-container">
-            <div class="item-card">
-                <p><%=item.name%></p>
-                <p><%=item.description%></p>
-                <p><%=item.price%></p>
-                <p><%=item.quantity%></p>
-                <p><a href="/<%=item.id%>/updateItem">Update</a></p>
-                
-                <form action="/<%=item.id%>/deleteItem" method="post"
-                    onsubmit="return confirm('Are you sure you want to Delete?')">
-                    <button type="submit">Delete</button>
+    <div class="item-detail">
+         <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
+                <div class="item-body">
+                    <p class="title"><%=item.name%></p>
+                    <p class="category-description"><%=item.description%></p>
+                    <p>Price: $<%=item.price%></p>
+                    <p>Quantity: <%=item.quantity%></p>
+                </div>
+
+                <div class="card-actions">
+                    <a class="btn btn-update" href="/<%=item.id%>/updateItem">Update</a>
+                    <form action="/<%=item.id%>/deleteItem" method="post"
+                        onsubmit="return confirm('Are you sure you want to Delete?')">
+                    <button class="btn-delete" type="submit">Delete</button>
                 </form>
-
-
-                <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
-            </div>
-            <a href="/categoryDetails/<%=item.category_id%>">Back</a>
+                </div>
     </div>
+     <a href="/categoryDetails/<%=item.category_id%>">Back</a>
     <%- include('partials/footer')%>
