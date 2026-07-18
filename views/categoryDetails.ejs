@@ -5,13 +5,13 @@
     <div class="items-container">
         <%items.forEach((item) => {%>
             <div class="item-card">
+                <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
                 <p><%=item.name%></p>
                 <p><%=item.description%></p>
                 <p><%=item.price%></p>
                 <p><%=item.quantity%></p>
                 <p><a href="/itemDetails/<%=item.id%>">View Item</a></p>
                 
-                <img src="<%=item.image_url%>" alt="Picture of <%=item.name%>">
             </div>
         <%})%>
     </div>
