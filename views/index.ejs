@@ -9,11 +9,12 @@
                 <div class="card-actions">
                     <a class="btn btn-view" href="/categoryDetails/<%=category.id%>">View all</a>
                     <a class="btn btn-update" href="/<%=category.id%>/updateCategory">Update</a>
-                    <form action="/<%=category.id%>/deleteCategory" method="post"
-                        onsubmit="return confirm('Are you sure you want to Delete?')">
-                    <button class="btn btn-delete" type="submit">Delete</button>
-                </form>
+                    
                 </div>
+                <form action="/<%=category.id%>/deleteCategory" method="post"
+                        onsubmit="return confirm('Are you sure you want to Delete?')">
+                    <button class=" btn-delete" type="submit">🚮</button>
+                </form>
 
             </div>
         <%})%>

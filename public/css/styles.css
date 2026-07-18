@@ -46,7 +46,7 @@ body{
     align-items: center;
     gap: .5rem;
     width: 65%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 .card-actions form{
@@ -56,19 +56,26 @@ body{
 .btn{
     text-decoration: none;
     border: none;
-    background-color: var(--button-color-1);
-    color: white;
+    background-color: white;
+    color: var(--button-color-1);
     width: 100%;
-    border-radius: 5px;
+    
     padding: .2rem;
     text-align: center;
-
-   
     font: inherit;
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    /*box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);*/
+}
+
+.btn-update{
+    background-color: var(--primary);
+    border-bottom: .5px solid white;
+}
+
+.btn-view{
+    border-radius: 5px;
 }
 
 .btn:hover{
@@ -79,8 +86,17 @@ body{
     transform: scale(1.04);
 }
 
+.btn-delete:hover{
+    transform: scale(1.005);
+}
+
 .btn-delete{
     width: 100%;
+    border: none;
+    background-color: #2F5D50;
+    font-size: x-large;
+    color: rgb(245, 61, 61);
+    cursor: pointer;
 }
 
 .category-card p{
@@ -88,11 +104,10 @@ body{
 }
 
 .title{
-    font-family: "Playfair Display", serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: bolder;
-    color: #D97706;
-    border-bottom: 1px solid #f6f0f0;
+    color: var(--button-color-1);
    
 }
 
@@ -111,7 +126,7 @@ body{
     margin-left: .3rem;
     margin-right: .3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #D97706;
+    color: white;
     font-size: medium;
     
 }
