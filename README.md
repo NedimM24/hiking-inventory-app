@@ -3,6 +3,7 @@
 An inventory management application built with **Express**, **TypeScript**, **PostgreSQL**, and **EJS**.
 
 Summit Supply Co is an outdoor gear inventory application where users can manage hiking equipment categories and inventory items. Users can create, view, update, and delete categories and products.
+<img width="1251" height="1023" alt="image" src="https://github.com/user-attachments/assets/a2781e02-9a8c-4d74-9115-ec7bcafbe6ab" />
 
 ## Live Demo
 
