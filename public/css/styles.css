@@ -108,6 +108,7 @@ body{
 
 .category-card p{
     margin-top: .5rem;
+    
 }
 
 .title{
@@ -156,6 +157,39 @@ body{
     color: var(--button-color-1);
 }
 
+.cat-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: .7rem;
+    margin-bottom: .5rem;
+    line-height: 1;
+}
+
+.cat-title{
+     font-family: "Bebas Neue", sans-serif;
+}
+
+.cat-add{
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color-1);
+    color: #2F3B34;
+    padding: .5rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cat-add:hover{
+    transform: scale(1.1);
+}
+
+.cat-add:active{
+    transform: scale(1.07);
+}
+
 .item-detail{
     max-width: 400px;
     margin: 2rem auto;
@@ -180,6 +214,29 @@ body{
     color: var(--button-color-1);
     text-align: center;
 }
+
+.back-btn{
+    text-decoration: none;
+    border: none;
+    width: 30%;
+    border-radius: 5px;
+    background-color: var(--button-color-1);
+    color: #2F3B34;
+    padding: .5rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-self: center;
+}
+
+.back-btn:hover{
+    transform: scale(1.1);
+}
+
+.back-btn:active{
+    transform: scale(1.07);
+}
+
 /*CSS FOR HEADER*/
 .header{
     display: flex;
