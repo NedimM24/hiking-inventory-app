@@ -56,24 +56,24 @@ The application uses two related PostgreSQL tables:
 
 ## Categories Table
 
-| Column | Type | Description |
-|---|---|---|
-| id | Integer | Primary key |
-| name | VARCHAR | Category name |
-| description | TEXT | Category description |
-| image_url | VARCHAR | Category image |
+| Column      | Type    | Description          |
+| ----------- | ------- | -------------------- |
+| id          | Integer | Primary key          |
+| name        | VARCHAR | Category name        |
+| description | TEXT    | Category description |
+| image_url   | VARCHAR | Category image       |
 
 ## Items Table
 
-| Column | Type | Description |
-|---|---|---|
-| id | Integer | Primary key |
-| name | VARCHAR | Item name |
-| description | TEXT | Item description |
-| price | DECIMAL | Item price |
-| quantity | INTEGER | Inventory quantity |
-| category_id | INTEGER | Foreign key |
-| image_url | VARCHAR | Item image |
+| Column      | Type    | Description        |
+| ----------- | ------- | ------------------ |
+| id          | Integer | Primary key        |
+| name        | VARCHAR | Item name          |
+| description | TEXT    | Item description   |
+| price       | DECIMAL | Item price         |
+| quantity    | INTEGER | Inventory quantity |
+| category_id | INTEGER | Foreign key        |
+| image_url   | VARCHAR | Item image         |
 
 ---
 

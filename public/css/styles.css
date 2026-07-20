@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -6,14 +6,13 @@ body{
 }
 
 :root {
- --primary: #2F3B34;   
- --secondary: #14B8A6; 
+    --primary: #2f3b34;
+    --secondary: #14b8a6;
 
- --button-color-1: #E8B44F;
- /* --button-color-1: #D97706; */
- --button-color-2: #F7F3EA;
+    --button-color-1: #e8b44f;
+    /* --button-color-1: #D97706; */
+    --button-color-2: #f7f3ea;
 }
-
 
 /*INDEX OR HOME PAGE*/
 
@@ -21,178 +20,175 @@ body{
     display: grid;
     /* justify-items: center; */
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    padding: .5rem;
+    padding: 0.5rem;
     max-width: 100%;
     margin: 0 auto;
-    gap: .7rem;
+    gap: 0.7rem;
 }
 
-.category-card{
+.category-card {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 0rem;
-    margin-top: .4rem;
-    margin-bottom: .4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
     color: white;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-    background-color: #2F3B34;
+    background-color: #2f3b34;
 }
 
-.card-actions{
+.card-actions {
     display: flex;
     flex-direction: column;
     margin-top: auto;
     justify-self: center;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     width: 65%;
     font-family: sans-serif;
 }
 
-.card-actions form{
+.card-actions form {
     width: 100%;
 }
 
-.btn{
+.btn {
     text-decoration: none;
     border: none;
-   
+
     color: black;
     width: 100%;
-    
-    padding: .2rem;
+
+    padding: 0.2rem;
     text-align: center;
     font: inherit;
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     /*box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);*/
 }
 
-.btn-update{
+.btn-update {
     background-color: var(--primary);
-    border-bottom: .5px solid white;
+    border-bottom: 0.5px solid white;
     color: var(--button-color-1);
 }
 
-.btn-view{
-   border: 1px solid white;
-   color: white;
-   border-radius: 3px;
+.btn-view {
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.07);
 }
 
-.btn:active{
+.btn:active {
     transform: scale(1.04);
 }
 
-.btn-delete:hover{
+.btn-delete:hover {
     transform: scale(1.07);
 }
 
-.btn-delete{
+.btn-delete {
     width: 100%;
     border: none;
     background-color: var(--primary);
     color: rgb(245, 61, 61);
-    cursor: pointer; 
+    cursor: pointer;
     font-size: medium;
-    margin-bottom: .2rem;
-    border-bottom: .5px solid white;
+    margin-bottom: 0.2rem;
+    border-bottom: 0.5px solid white;
 }
 
-.category-card p{
-    margin-top: .5rem;
-    
+.category-card p {
+    margin-top: 0.5rem;
 }
 
-.title{
+.title {
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     font-weight: bold;
     color: var(--button-color-1);
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     min-height: 2.4em;
     text-align: center;
 }
 
-.category-card img{
+.category-card img {
     height: 100px;
     width: 100%;
     object-fit: cover;
     display: block;
 }
 
-.category-description{
+.category-description {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    height: calc(1.4em * 4); 
+    height: calc(1.4em * 4);
     overflow: hidden;
-    margin-left: .3rem;
-    margin-right: .3rem;
-    font-family: "Montserrat", sans-serif;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: medium;
-    
 }
 
-.item-card{
+.item-card {
     border: solid 2px black;
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    
 }
 
 /*CSS FOR category details (all items in said category)*/
-.card-body{
-    padding: .4rem;
-    font-family: "Montserrat", sans-serif;
+.card-body {
+    padding: 0.4rem;
+    font-family: 'Montserrat', sans-serif;
     color: var(--button-color-1);
 }
 
-.cat-header{
+.cat-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
     width: 100%;
-    padding: .7rem;
-    margin-bottom: .5rem;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
     line-height: 1;
 }
 
-.cat-title{
-     font-family: "Bebas Neue", sans-serif;
+.cat-title {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-.cat-add{
+.cat-add {
     text-decoration: none;
     border: none;
     border-radius: 5px;
     background-color: var(--button-color-1);
-    color: #2F3B34;
-    padding: .5rem;
-    font-family: "Montserrat", sans-serif;
+    color: #2f3b34;
+    padding: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.cat-add:hover{
+.cat-add:hover {
     transform: scale(1.1);
 }
 
-.cat-add:active{
+.cat-add:active {
     transform: scale(1.07);
 }
 
-.item-detail{
+.item-detail {
     max-width: 400px;
     margin: 2rem auto;
     display: flex;
@@ -203,44 +199,44 @@ body{
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.item-detail img{
+.item-detail img {
     height: 220px;
     width: 100%;
     object-fit: cover;
     display: block;
 }
 
-.item-body{
-    padding: .4rem;
-    font-family: "Montserrat", sans-serif;
+.item-body {
+    padding: 0.4rem;
+    font-family: 'Montserrat', sans-serif;
     color: var(--button-color-1);
     text-align: center;
 }
 
-.back-btn{
+.back-btn {
     text-decoration: none;
     border: none;
     width: 30%;
     border-radius: 5px;
     background-color: var(--button-color-1);
-    color: #2F3B34;
-    padding: .5rem;
-    font-family: "Montserrat", sans-serif;
+    color: #2f3b34;
+    padding: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
     text-align: center;
     align-self: center;
 }
 
-.back-btn:hover{
+.back-btn:hover {
     transform: scale(1.1);
 }
 
-.back-btn:active{
+.back-btn:active {
     transform: scale(1.07);
 }
 
 /*CSS FOR HEADER*/
-.header{
+.header {
     display: flex;
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
@@ -250,79 +246,76 @@ body{
     text-decoration: none;
 }
 
-.header a{
+.header a {
     text-decoration: none;
     color: inherit;
 }
 
-.header-nav{
+.header-nav {
     display: flex;
     gap: 1rem;
 }
 /*CSS FOR FOOTER PARTIAL*/
-.footer{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     border-top: 1px solid #b8b5b5;
-     font-family: 'Times New Roman', Times, serif;
-     margin: 0 3.6rem;
-     margin-top: auto;
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #b8b5b5;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 3.6rem;
+    margin-top: auto;
 }
 
 /* FORM STYLING*/
-.form{
+.form {
     display: flex;
     flex-direction: column;
-   
+
     padding: 2rem;
-    gap: .5rem;
+    gap: 0.5rem;
     background-color: var(--primary);
     color: var(--button-color-1);
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.form-btn{
+.form-btn {
     text-decoration: none;
     border: none;
     border-radius: 5px;
     background-color: var(--button-color-1);
-    color: #2F3B34;
-    padding: .5rem;
-    font-family: "Montserrat", sans-serif;
+    color: #2f3b34;
+    padding: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
     width: 40%;
     align-self: center;
 }
 
-.form-btn:hover{
+.form-btn:hover {
     transform: scale(1.1);
 }
 
-.form-btn:active{
+.form-btn:active {
     transform: scale(1.07);
 }
 
 /* Styles for tablets (min-width: 768px) and up */
 @media screen and (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-  
-  .categories-container {
-    display: grid;
-    /* justify-items: center; */
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    max-width: 900px;
-    margin: 0 auto;
-    padding: .5rem;
-    gap: .7rem;
+    .container {
+        width: 750px;
+    }
+
+    .categories-container {
+        display: grid;
+        /* justify-items: center; */
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0.5rem;
+        gap: 0.7rem;
+    }
+    .category-card img {
+        height: 202px;
+    }
 }
-  .category-card img{
-    height: 202px;
-  }
-}
-
-
-

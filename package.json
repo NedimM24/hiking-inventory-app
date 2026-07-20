@@ -1,31 +1,34 @@
 {
-  "name": "hiking-inventory-app",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "",
-  "main": "dist/app.js",
-  "scripts": {
-    "dev": "tsx watch src/app.ts",
-    "build": "tsc",
-    "start": "node dist/app.js",
-    "seed": "tsx src/db/populatedb.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^17.4.2",
-    "ejs": "^6.0.1",
-    "express": "^5.2.1",
-    "express-validator": "^7.3.2",
-    "pg": "^8.22.0"
-  },
-  "devDependencies": {
-    "@types/ejs": "^3.1.5",
-    "@types/express": "^5.0.6",
-    "@types/node": "^26.1.1",
-    "@types/pg": "^8.20.0",
-    "tsx": "^4.19.0",
-    "typescript": "^7.0.2"
-  }
+    "name": "hiking-inventory-app",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "",
+    "main": "dist/app.js",
+    "scripts": {
+        "dev": "tsx watch src/app.ts",
+        "build": "tsc",
+        "start": "node dist/app.js",
+        "seed": "tsx src/db/populatedb.ts",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^17.4.2",
+        "ejs": "^6.0.1",
+        "express": "^5.2.1",
+        "express-validator": "^7.3.2",
+        "pg": "^8.22.0"
+    },
+    "devDependencies": {
+        "@types/ejs": "^3.1.5",
+        "@types/express": "^5.0.6",
+        "@types/node": "^26.1.1",
+        "@types/pg": "^8.20.0",
+        "prettier": "^3.9.5",
+        "tsx": "^4.19.0",
+        "typescript": "^7.0.2"
+    }
 }
