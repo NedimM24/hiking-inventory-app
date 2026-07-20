@@ -22,7 +22,7 @@ body{
     /* justify-items: center; */
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     padding: .5rem;
-    max-width: 200px;
+    max-width: 100%;
     margin: 0 auto;
     gap: .7rem;
 }
@@ -314,7 +314,7 @@ body{
     display: grid;
     /* justify-items: center; */
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: .5rem;
     gap: .7rem;
