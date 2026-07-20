@@ -6,7 +6,7 @@ Summit Supply Co is an outdoor gear inventory application where users can manage
 
 ## Live Demo
 
-hiking-inventory-app-production.up.railway.app
+https://hiking-inventory-app-production.up.railway.app/
 
 # Features
 
